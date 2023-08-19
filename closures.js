@@ -12,3 +12,33 @@ var mult = multFn();
 console.log(mult(18));
 
 //out put 162 we can use private variables and methods using closures
+
+//333333333333333333333333333333333
+
+
+(function() {
+  
+  var multFn = function multiply() {
+    // This variable is local to
+    // the closure and holds
+    // its value inbetween
+    // multiple calls
+   var mult = 9;
+   return function(val) {
+     mult = mult * val;
+     return mult;
+   }
+  };
+  
+  var mult = multFn();
+    
+  // Call the method
+  // multiple times
+  console.log(mult(2));
+  console.log(mult(3));
+  console.log(mult(5));
+}());
+
+//output 18
+//54
+//270
