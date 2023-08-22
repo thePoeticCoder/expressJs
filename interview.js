@@ -294,22 +294,7 @@ const returnMultipleDupesArray = (arr) => {
   return dupesArray;
 }
 console.log(returnMultipleDupesArray(arr)); // prints [1, 6, 7, 10]*/
-/*function findSecondLargestElem(arr){
-    let first = -1 , second = -1;
 
-    for(let i = 0; i <= arr.length-1; i++){
-        if(arr[i] > first){
-            second = first;
-            first = arr[i];
-        }
-        else if( arr[i] > second && arr[i] != first){
-            second = arr[i];
-        }
-    }
-    console.log(second);
-}
-let arr = [12, 35, 1, 10, 34, 1]
-findSecondLargestElem(arr);*/
 /*const promise1 = Promise.resolve(3);
 const promise2 = 42;
 const promise3 = new Promise((resolve, reject) => {
@@ -319,33 +304,7 @@ const promise3 = new Promise((resolve, reject) => {
 Promise.all([promise1, promise2, promise3]).then((values) => {
   console.log(values);
 });
-const obj = {
-    "one": 1,
-    "two": {
-       "three": 3
-    },
-    "four": {
-       "five": 5,
-       "six": {
-          "seven": 7
-       },
-       "eight": 8
-    },
-    "nine": 9
- };
- var res={"one":1,
-}
-const flattenJSON = (obj = {}, res = {}, extraKey = '') => {
-    for(key in obj){
-       if(typeof obj[key] !== 'object'){
-          res[extraKey + key] = obj[key];
-       }else{
-          flattenJSON(obj[key], res, `${extraKey}${key}.`);
-       };
-    };
-    return res;
- };
- console.log(flattenJSON(obj));
+
 
  function createBase(baseNumber) {
   return function(N) {
