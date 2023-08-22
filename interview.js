@@ -1,20 +1,15 @@
 //array of numbers second largest in array 
-
 //console.log(a); o/p=undefined
 //var a=2;
 //console.log(a); // 2
-
 // console.log(a); // cannot acces a before initialization 
  //let a=2;
 //console.log(a);  // 2
-
 //console.log(a); // cannot acces a before initialization 
 //const a=2;
 //console.log(a);  // 2
 //a=5;
 //console.log(a); // type error 
-
-
 //console.log(undefined+5); op=nan
 // console.log(5+undefined);  op=nan
 //console.log(null+5); o/p=5;
@@ -74,26 +69,7 @@ console.log(report);*/
 
 ////check prime 
 //var n =5;
-/*isprime(n);
-function isprime(n){
-    var count=0;
-    if(n==1 || n==2){
-        console.log("prime")
-        return;
-    }
-    for(let i=2; i*i<n; i++)
-    {
-        if(n%i==0){
-            count++;
-            break;
-        }
-    }
-    if(count>0){
-        console.log("not prime");
-    }else{
-        console.log("prime")
-    }
-}
+
 var ans=greatestCommonDivisor(13,39);
 console.log(ans);
 function greatestCommonDivisor(a, b){
@@ -130,7 +106,7 @@ for (let i =0; i<arr.length; i++)
   console.log(result);
   }
 
-charAt()	Returns the character at a specified index (position)
+/*charAt()	Returns the character at a specified index (position)
 charCodeAt()	Returns the Unicode of the character at a specified index
 concat()	Returns two or more joined strings
 endsWith()	Returns if a string ends with a specified value
