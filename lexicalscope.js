@@ -8,10 +8,16 @@ function b() {
 
 console.log("line number 3",varName);
 function fn (){
-    console.log("line number 5" ,varName);
+console.log("line number 5" ,varName);
 var varName =20;
 
 b();
 console.log(varName);
 }
 fn();
+//o/p=>
+// line number 1 undefined
+// line number 3 10
+// line number 5 undefined
+// line number 8 10
+// 20
