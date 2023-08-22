@@ -43,6 +43,18 @@ console.log(mult(18));
   console.log(mult(5));
 }());
 
-//output 18
-//54
-//270
+// output 18
+// 54
+// 270
+
+function one (){
+  var mult = 2;
+  return function two (val){
+    mult= mult*val;
+    return mult;
+  }
+}
+
+var three = one();
+three(3);
+console.log(three(4));
