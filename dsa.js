@@ -74,3 +74,41 @@ const findDupes = (arr1) => {
 }
 console.log(findDupes(arr)); // Returns 7 
 //####################################################################################
+var ans=greatestCommonDivisor(13,39);
+console.log(ans);
+function greatestCommonDivisor(a, b){
+    var divisor = 2, 
+        greatestDivisor = 1;
+  
+    //if u pass a -ve number this will not work. fix it dude!!
+    if (a < 2 || b < 2)
+       return 1;
+    
+    while(a >= divisor && b >= divisor){
+     if(a %divisor == 0 && b% divisor ==0){
+        greatestDivisor = divisor;      
+      }
+     divisor++;
+    }
+    return greatestDivisor;
+  }
+
+  //########################################################################################
+rd();
+function rd(){
+var arr=[1,2,3,4,5,6,78,4,3,5,7,3,2,5,6,7,4,4,3,3,5,6,7,7,77,8,8,666,6,7,7,5,5];
+var ex={};
+var result=[];
+
+for (let i =0; i<arr.length; i++)
+   {
+    var curr=arr[i];
+    if(!ex[curr]){
+        result.push(curr);
+        ex[curr]=true;
+    }
+  }
+  console.log(result);
+  }
+  //#######################################################################################
+  
