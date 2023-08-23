@@ -217,23 +217,8 @@ console.log(a[b]);//456 a["[object,object]"]
 a=10;
 console.log(a);
 let a;*/
-/*setTimeout(() => {
-    console.log('timeout');
-  }, 0);
-  
-  setImmediate(() => {
-    console.log('immediate');
-  });
 
-  //output is timeout immidiete
 
-  setImmediate(() => {
-    console.log('immediate');
-  }); 
-  setTimeout(() => {
-    console.log('timeout');
-  }, 0);
-  //output is dimmidiete timeout*/
 /*
   const arr = [1,2,3,4,5,6,7,7,8,6,10];
 const findDupes = (arr) => {
@@ -249,27 +234,7 @@ const findDupes = (arr) => {
   return false;
 }
 console.log(findDupes(arr)); // Returns 7 
-const arr = [1,1,2,3,4,5,6,7,8,6,6,7,7,7,10,10];
-const returnMultipleDupesArray = (arr) => {
-  let observed = {};
-  let dupesArray = [];
-  
-  for(let i = 0; i < arr.length; i++) {
- 
-    if(observed[arr[i]]) {
-      if(observed[arr[i]] === 1) {
-        dupesArray.push(arr[i]);
-      }
-      
-      observed[arr[i]] = observed[arr[i]] + 1;
-    } else {
-      observed[arr[i]] = 1;
-    }
-  }
-  
-  return dupesArray;
-}
-console.log(returnMultipleDupesArray(arr)); // prints [1, 6, 7, 10]*/
+
 
 /*const promise1 = Promise.resolve(3);
 const promise2 = 42;
@@ -295,23 +260,6 @@ addSix(10);
 addSix(21);
 
 
-
-var firstWord = "Mary";
-var secondWord = "Army";
-
-isAnagram(firstWord, secondWord); // true
-
-function isAnagram(first, second) {
-  // For case insensitivity, change both words to lowercase.
-  var a = first.toLowerCase();
-  var b = second.toLowerCase();
-
-  // Sort the strings, and join the resulting array to a string. Compare the results
-  a = a.split("").sort().join("");
-  b = b.split("").sort().join("");
-
-  return a === b;
-}*/
 
 
 console.log("welcome");
