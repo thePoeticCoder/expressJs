@@ -7,3 +7,5 @@ eventEmitter.on('start', number => {
 });
 
 eventEmitter.emit('start', 23);
+//event bubbling 
+// event listner

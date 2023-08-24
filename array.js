@@ -39,6 +39,36 @@ const arr=[5,1,2,3,6];
 //console.log(oddarr); //[2,6]
 
 
+//spread operator
+// const myVehicle = {
+//   brand: 'Ford',
+//   model: 'Mustang',
+//   color: 'red'
+// }
+
+// const updateMyVehicle = {
+//   type: 'car',
+//   year: 2021,
+//   color: 'yellow'
+// }
+
+// const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+
+//rest parameters  ...theArgs
+// function sum(...theArgs) {
+//   let total = 0;
+//   for (const arg of theArgs) {
+//     total += arg;
+//   }
+//   return total;
+// }
+
+// console.log(sum(1, 2, 3));
+// // Expected output: 6
+
+// console.log(sum(1, 2, 3, 4));
+
+
 
 /*charAt()	Returns the character at a specified index (position)
 charCodeAt()	Returns the Unicode of the character at a specified index
