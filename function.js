@@ -7,6 +7,13 @@ sayHi(10);   // calling an funcxtion with different input
 
 sayHi("hello");   // calling an funcxtion with different input 
 
+function add(x, y) {
+    return x + y;
+}
+
+console.log(add.length); // 2
+console.log(add.prototype); // Object{}
+
 
 function learnreturn (inputDo) {
     return "returned from learnreturn ";

@@ -34,6 +34,7 @@
 //console.log(obj && obj.a); //1
 //console.log(obj || obj.a); //{ a: 1, b: 2, c: 3 
     // var g = h= 3;
+//console.log('5' * 2); // 10
 
 
 //console.log("g defined? " + (typeof g));
