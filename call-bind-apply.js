@@ -61,3 +61,23 @@ let run = runner.run.bind(flyer, 20);
 run();
 
 
+//With the apply() method, you can write a method that can be used on different objects.
+const person = {
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const person1 = {
+  firstName: "Mary",
+  lastName: "Doe"
+}
+
+// This will return "Mary Doe":
+person.fullName.apply(person1);
+
+// The call() method takes arguments separately.
+
+// The apply() method takes arguments as an array.
+
+
