@@ -1,84 +1,31 @@
-// function add(x, y) {
-//   return x + y;
-// }
 
-// let result = add.call(this, 10, 20);
-// console.log(result); // 30
-
-// const car = {
-//   name: 'car',
-//   start() {
-//     console.log('Start the ' + this.name);
-//   },
-//   speedUp() {
-//     console.log('Speed up the ' + this.name);
-//   },
-//   stop() {
-//     console.log('Stop the ' + this.name);
-//   },
-// };
-
-// const aircraft = {
-//   name: 'aircraft',
-//   fly() {
-//     console.log('Fly');
-//   },
-// };
-
-// car.start.call(aircraft);
-// car.speedUp.call(aircraft);
-// aircraft.fly();
-
-// //output 
-// // Start the aircraft
-// // Speed up the aircraft
-// // Fly
-
-// fn.apply(thisArg, [args]);
-// const person = {
-//     firstName: 'John',
-//     lastName: 'Doe'
-// }
-
-// function greet(greeting, message) {
-//     return `${greeting} ${this.firstName}. ${message}`;
-// }
-// let result = greet.apply(person, ['Hello', 'How are you?']);
-
-// console.log(result);
-
-// //output Hello John. How are you?
-
-// fn.bind(thisArg[, arg1[, arg2[, ...]]])
-// let flyer = {
-//     name: 'Flyer',
-//     fly: function(speed) {
-//         console.log(this.name + ' flies at ' + speed + ' mph.');
-//     }
-// };
-
-// let run = runner.run.bind(flyer, 20);
-// run();
+//call
+// The call method binds the this value to the function and executes the function.
+//  It takes the this value and a list of arguments as parameters. Then, 
+//  it returns the value returned by the function, which is called using the call method.
 
 
-// //With the apply() method, you can write a method that can be used on different objects.
-// const person = {
-//   fullName: function() {
-//     return this.firstName + " " + this.lastName;
-//   }
-// }
+function test(arg1, arg2){
+  console.log(this.num, arg1, arg2); // 100, 10, 20
+}
 
-// const person1 = {
-//   firstName: "Mary",
-//   lastName: "Doe"
-// }
+test.call({num: 100}, 10, 20);
 
-// // This will return "Mary Doe":
-// person.fullName.apply(person1);
+//apply
+//The apply method binds the this value to the function and executes the function.
+// It takes the this value and a single array object as parameters, 
+//and it returns the value returned by the function, which is called using the apply method.
 
-// The call() method takes arguments separately.
+function test(...arguments){
+  console.log(this.num, arguments);//100, [1,2,3]
+}
 
-// The apply() method takes arguments as an array.
+test.apply({num: 100}, [1,2,3]); 
+
+
+//bind
+//The bind method binds the this value to the function and returns a new function. However,
+// we still need to separately invoke the returned function.
 
 const person = {
   firstName:"John",
@@ -87,7 +34,6 @@ const person = {
     return this.firstName + " " + this.lastName;
   }
 }
-
 const member = {
   firstName:"Hege",
   lastName: "Nilsen",
@@ -96,4 +42,8 @@ const member = {
 let fullName = person.fullName.bind(member);
 console.log(fullName());
 
+// call: binds the this value, invokes the function, and allows you to pass a list of arguments.
 
+// apply: binds the this value, invokes the function, and allows you to pass arguments as an array.
+
+// bind: binds the this value, returns a new function, and allows you to pass in a list of arguments.
