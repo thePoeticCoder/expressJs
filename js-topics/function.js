@@ -1,52 +1,50 @@
 // non primitive  -> array, object ,functiuon
-function sayHi (param) {         // dont need to speicfy thw data type of param 
+// finction are treated as variable 
+//  function  are first class citizen
+// In regular functions the this keyword represented the object that called the function,
+//  which could be the window, the document, a button or whatever.
+// With arrow functions the this keyword always represents the object that defined the arrow function.
+function sayHi (param) { // dont need to specicfy the data type of param 
     console.log("Hello from sayHi");
     console.log("param received ", param);
 }
-sayHi(10);   // calling an funcxtion with different input 
+sayHi(10);          // calling an funcxtion with different input 
+sayHi("hello");      // calling an funcxtion with different input 
 
-sayHi("hello");   // calling an funcxtion with different input 
-
+//******************************************************************************/
 function add(x, y) {
     return x + y;
 }
-
 console.log(add.length); // 2
 console.log(add.prototype); // Object{}
-
+//******************************************************************************** */
 
 function learnreturn (inputDo) {
     return "returned from learnreturn ";
 }
 let ret = learnreturn([1,2,3,4,5,6]);
-console.log("return value is ", ret);  // you can use ternarny operator and can retrun different types value 
+console.log("return value is ", ret);  // you can use ternary operator and can return different types value 
  // if(ret > 56 ? true : "return string ");
-
  // types of functions 
 //1 definition 
 function sayhello(parameter) // no need to decalere the data type of parameter 
 {
     console.log("hello");
 }
-sayhello(); // for this if we are not 
-//passing the parameter  undefined will be the passing parameter
+sayhello(); // for this if we are not passing the parameter  undefined will be the passing parameter
 let rval =sayhello();
-console.log("rval ,rval"); // o/p ==rval undefined 
-// finction are treated as variable 
-//  function  are first class citizen
+console.log("rval",rval()); // o/p ==rval undefined 
+//******************************************************************************* */
 
-
-
-// functiomn expression 
+// function expression 
 let funContainer =function fn(){
     console.log("I am Expression");
 }
 funContainer();
 
-
-// if you are not giving the name than function will be anonymopus function 
-let anpnymousFn  =function ();
-anpnymousFn();
+// if you are not giving the name than function will be anonymous function 
+let anonymousFn  =function ();
+anonymousFn();
 
 
 // IIFE --> Immediately Invoked function
@@ -54,7 +52,7 @@ anpnymousFn();
 (function fn(){
     console.log("I am already called ");
 })();
-///
+//****************************************************************** */
 
 
 //Arrow Function --> Syntax ,react , this 
@@ -62,10 +60,7 @@ let fn =(num) => {
     return num*num;
 }
 console.log(fn(5));
-
-
 //callback
-
 // First class citizens 
 //1. assignment -> fn expression 
 // 2. variable can be passed as a parameter 
@@ -103,3 +98,13 @@ fn.myfn =function fn(){
 // call can be 
 fn();
 fn.myfn();
+//***********************************************************/
+foo(); // 'FOOOOO'
+function foo() {
+  console.log('FOOOOO');
+}
+foo(); // Uncaught TypeError: foo is not a function
+var foo = function() {
+  console.log('FOOOOO');
+};
+
