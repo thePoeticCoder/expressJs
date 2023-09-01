@@ -1,4 +1,4 @@
-import BinarySearchTree from '../binary-search-tree/BinarySearchTree';
+import BinarySearchTree from './BinarySearchTree';
 
 // Possible colors of red-black tree nodes.
 const RED_BLACK_TREE_COLORS = {
