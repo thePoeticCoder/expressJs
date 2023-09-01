@@ -113,7 +113,7 @@
 //   //#######################################################################################
   
 
-  const arr = [1,2,3,4,5,1,2,3,2,3,4,2,2,3,4,5,2];
+  /*const arr = [1,2,3,4,5,1,2,3,2,3,4,2,2,3,4,5,2];
 //0 odd
 //1 even
   //result {
@@ -124,9 +124,62 @@
       var count = {};
       arr.forEach(e => count[e] ? count[e]++ : count[e] = 1 );
       return count ;
-
- 
-   
   };
 
-  console.log(help(arr));
+  console.log(help(arr));*/
+
+  //#################################################
+
+  // merge two array 
+  // const arr1 = [11,13,14,40,44];
+  // const arr2 = [12,15,23,33,46];
+
+  // console.log(sortArry(arr1,arr2));
+  // function sortArry(arr1,arr2){
+
+  //   let i = 0;
+  //   let j = 0;
+
+  //   let k=0;
+  //   let res=[];
+  //   while(i< arr1.length && j<= arr2.length ){
+  //     if(arr1[i]<= arr2[j]){
+  //       res[k] = arr1[i];
+  //       i++;
+  //       k++;
+  //     }else {
+  //       res[k] = arr2[j];
+  //       j++;
+  //       k++;
+  //     }
+  //   }
+
+  //   while(i<arr1.length){
+  //     res[k] = arr1[i];
+  //     i++;
+  //     k++;
+  //   }
+  //   while(j<arr2.length){
+  //     res[k] = arr2[j];
+  //     j++;
+  //     k++;
+  //   }
+
+  //   return res;
+  // }
+
+  //################################################################3
+  //reverse the string
+
+  const str = "abcdefghijkl";
+  console.log(reverseString(str));
+
+  function reverseString(str){
+    let res  = "";
+    for (let i=str.length -1; i>= 0; i--){
+      res += str[i];
+    }
+    return res;
+  }
+
+  

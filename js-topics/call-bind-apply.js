@@ -3,7 +3,7 @@
 // The call method binds the this value to the function and executes the function.
 //  It takes the this value and a list of arguments as parameters. Then, 
 //  it returns the value returned by the function, which is called using the call method.
-
+//in arrow function it will not work this argument will be undefined.
 
 function test(arg1, arg2){
   console.log(this.num, arg1, arg2); // 100, 10, 20

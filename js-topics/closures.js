@@ -15,6 +15,9 @@ function multFn() {
 var mult = multFn();
 console.log(mult(18));
 
+
+
+
 //out put 162 we can use private variables and methods using closures
 
 //333333333333333333333333333333333
