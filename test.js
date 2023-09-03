@@ -1,30 +1,17 @@
-const express = require('express')
-const app = express()
-const port = 3000
+// function help (...argu){
+//         console.log(this.arg,argu);
+// }
+// help.apply({arg:1},[2,3,4,5,6]);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+function one (){
+  var mult = 2;
+  return function (val){
+    mult = mult *val;
+    return mult ;
+  }
+}
 
-app.post('/', (req, res) => {
-    var emp = new Employee({
-        name: req.body.name,
-        position: req.body.position,
-        office: req.body.office,
-        salary: req.body.salary,
-    });
-    emp.save((err, doc) => {
-        if (!err) { res.send(doc); }
-        else { console.log('Error in Employee Save :' + JSON.stringify(err, undefined, 2)); }
-    });
-});
+var two = one();
+console.log(two(3));
+console.log(two(4));
 
-app.get('/',(req,res)=>{ //get request to send the file for use 
-    res.render('index',{
-        title:'My Home Page of the ejs' // title tags for ejs files 
-    });  // take the path of current folder and add index path in it 
-}); // routes
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})

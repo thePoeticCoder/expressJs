@@ -68,6 +68,7 @@
 // console.log("1 && 2 = "+(1 && 2));//2
 // console.log(false == '0') //true
 // console.log(false === '0') //false
+console.log(++[[]][+[]] + [+[]])
 var a={},
     b={key:'b'},
     c={key:'c'};

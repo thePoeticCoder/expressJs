@@ -85,9 +85,9 @@ function outer ()
     }
 }
 let raval =outer();
-console.log("rval",rval);
+console.log("rval",raval());
 rval();
-
+//*********************************************************************** */
 function fn(){
     console.log ("hello from functoin ");
 }
