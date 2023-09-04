@@ -8,8 +8,8 @@ const users= [
 ];
 
 const fullName=users.map((user)=>user.f+" "+user.l);
+/********************************************* */
 
-const ssn = Symbol('ssn');
 
 const person = {
     firstName: 'John',
@@ -19,8 +19,9 @@ const person = {
 };
 
 const kv = Object.entries(person);
-
 console.log(kv)
+
+/*********************************************** */
 
 let amount = +0,
    volume = -0;
