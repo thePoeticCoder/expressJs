@@ -89,3 +89,76 @@ delete emp1.company;
 console.log(emp1.company);
 //o/p ==> xyz
 //###########################################################################3
+
+// console.log('A');
+// setTimeout(() => {
+//   console.log('B');
+// }, 0);
+
+// setImmediate(() => {
+//   console.log('C');
+// });
+
+// process.nextTick(() => {
+//   console.log('D');
+// });
+
+// console.log('E');
+
+// // // A
+// // // E
+// // // C
+// // // D
+// // // B
+
+// console.log('A');
+// setInterval(() => {
+//   console.log('B');
+// }, 1000);
+
+// setTimeout(() => {
+//   console.log('C');
+// }, 5000);
+
+
+
+
+// USER _DETAILS{
+//   id
+//   name,
+//   email,
+//   phoneNo,
+//   password,
+//   followersLIstId
+//   postId
+//   role :[user,admin,developer,subAdmin]
+// }
+
+
+
+
+// FOLLOWERS_LIST{
+//   id
+//   userId
+//   FollowerId[]
+
+// }
+
+// POST_LIST{
+//   id:
+//   userId,
+//   time,
+//   content:{
+//     pictureId
+//   }
+// }
+
+// PICTURE_LIST{
+
+//   id
+//   store the photos/videos/text
+// }
+
+
+
+

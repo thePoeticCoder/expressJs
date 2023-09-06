@@ -24,7 +24,7 @@ console.log(kv)
 /*********************************************** */
 
 let amount = +0,
-   volume = -0;
+volume = -0;
 console.log(Object.is(amount, volume)); //false
 objectName ?. propertyName
 objectName ?. [expression] //optional chaining property
@@ -184,41 +184,41 @@ const output = transformAwards(awards);
 console.log(JSON.stringify(output, null, 2));
 
 
-// // const shareholder = [ 
-// // {stock: 'AAPL',name:['Steve','Bill','Tim'],count:3}, 
-// // {stock:'MSFT',name:['Steve','Bill'],count:2},
-// // {stock: 'FB',name:['Mark'],count:1}, 
-// // ]; 
-// const portfolio =[ 
-// {name: 'Mark',stock: 'FB'}, 
-// {name: 'Steve',stock: 'AAPL'}, 
-// {name: 'Tim',stock: 'AAPL'}, 
-// {name: 'Steve',stock: 'MSFT'}, 
-// {name: 'Bill',stock: 'MSFT'}, 
-// {name: 'Bill',stock: 'AAPL'}, 
+// const shareholder = [ 
+// {stock: 'AAPL',name:['Steve','Bill','Tim'],count:3}, 
+// {stock:'MSFT',name:['Steve','Bill'],count:2},
+// {stock: 'FB',name:['Mark'],count:1}, 
 // ]; 
+const portfolio =[ 
+{name: 'Mark',stock: 'FB'}, 
+{name: 'Steve',stock: 'AAPL'}, 
+{name: 'Tim',stock: 'AAPL'}, 
+{name: 'Steve',stock: 'MSFT'}, 
+{name: 'Bill',stock: 'MSFT'}, 
+{name: 'Bill',stock: 'AAPL'}, 
+]; 
 
 
 
-// function transformPortfolio(portfolio) {
-//   const shareholderMap = {};
+function transformPortfolio(portfolio) {
+  const shareholderMap = {};
 
-//   portfolio.forEach(entry => {
-//     const { name, stock } = entry;
+  portfolio.forEach(entry => {
+    const { name, stock } = entry;
 
-//     if (!shareholderMap[stock]) {
-//       shareholderMap[stock] = { stock, name: [], count: 0 };
-//     }
+    if (!shareholderMap[stock]) {
+      shareholderMap[stock] = { stock, name: [], count: 0 };
+    }
 
-//     if (!shareholderMap[stock].name.includes(name)) {
-//       shareholderMap[stock].name.push(name);
-//       shareholderMap[stock].count++;
-//     }
-//   });
+    if (!shareholderMap[stock].name.includes(name)) {
+      shareholderMap[stock].name.push(name);
+      shareholderMap[stock].count++;
+    }
+  });
 
-//   const shareholder = Object.values(shareholderMap);
-//   return shareholder;
-// }
+  const shareholder = Object.values(shareholderMap);
+  return shareholder;
+}
 
 // const output = transformPortfolio(portfolio);
 // console.log(JSON.stringify(output, null, 2));
