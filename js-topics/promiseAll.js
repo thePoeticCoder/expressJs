@@ -58,3 +58,5 @@ const P4 = new Promise ((resolve , reject)=>{
 Promise.all([P1,P2,P3,P4]).then((values) => {
 	console.log(values);
 })
+
+//Promise.allSettled();
