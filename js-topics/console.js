@@ -68,15 +68,16 @@
 // console.log("1 && 2 = "+(1 && 2));//2
 // console.log(false == '0') //true
 // console.log(false === '0') //false
-console.log(++[[]][+[]] + [+[]])//10
-var a={},
-    b={key:'b'},
-    c={key:'c'};
+// console.log(++[[]][+[]] + [+[]])//10
+// var a={},
+//     b={key:'b'},
+//     c={key:'c'};
 
-a[b]=123;
-a[c]=456;
+// a[b]=123;
+// a[c]=456;
 
- console.log(a[b]);//456 a["[object,object]"]
+//  console.log(a[b]);//456 a["[object,object]"]
+
 
 
 

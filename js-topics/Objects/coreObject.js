@@ -8,7 +8,6 @@
 // ];
 
 // const fullName=users.map((user)=>user.f+" "+user.l);
-// // console.log(fullName);
 // /**************************************************** */
 // const ssn = Symbol('ssn');
 // const person = {
@@ -63,14 +62,71 @@ function help (aob,fw){
     for (const key in res) {
         superArrayOfObjects = [...superArrayOfObjects, { fw: key, count: res[key]}];
     }
-
-	return superArrayOfObjects;
-
-
-	
-
-	
+	return superArrayOfObjects;	
 }
 
+const students = [
+  {
+    name: 'Student A',
+    marks: [{ sub1: 75 }, { sub2: 59 }, { sub3: 84 }]
+  },
+  {
+    name: 'Student B',
+    marks: [{ sub1: 25 }, { sub2: 19 }, { sub3: 35 }]
+  },
+  {
+    name: 'Student C',
+    marks: [{ sub1: 56 }, { sub2: 90 }, { sub3: 34 }]
+  }
+];
+
+function findStudentsWithSumGreaterThan150(students) {
+  const result = [];
+  
+  for (const student of students) {
+    const totalMarks = student.marks.reduce((sum, markObj) => {
+      // Extract the mark value from each object and add it to the sum
+      const markValue = Object.values(markObj)[0];
+      return sum + markValue;
+    },0);
+
+    if (totalMarks > 150) {
+      // Add the student's name and total marks to the result array
+      result.push({ [student.name]: totalMarks });
+    }
+  }
+
+  return result;
+}
+
+const studentsWithSumGreaterThan150 = findStudentsWithSumGreaterThan150(students);
+// console.log(studentsWithSumGreaterThan150);
+
+//It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value
+
+const people = [
+  { name: "Kyle", age: 26 },
+  { name: "John", age: 31 },
+  { name: "Sally", age: 42 },
+  { name: "Jill", age: 42 },
+]
+
+const peopleGroupedByAge = people.reduce((groupedPeople, person) => {
+  const age = person.age
+  if (groupedPeople[age] == null) groupedPeople[age] = []
+  groupedPeople[age].push(person)
+  return groupedPeople
+}, {})
+console.log(peopleGroupedByAge)
+/*
+  {
+    26: [{ name: 'Kyle', age: 26 }],
+    31: [{ name: 'John', age: 31 }],
+    42: [
+      { name: 'Sally', age: 42 },
+      { name: 'Jill', age: 42 }
+    ]
+  }
+*/
 
 

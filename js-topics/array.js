@@ -52,7 +52,7 @@ const arr=[5,1,2,3,6];
 
 // const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
 
-//rest parameters  ...theArgs
+// ? rest parameters  ...theArgs
 // function sum(...theArgs) {
 //   let total = 0;
 //   for (const arg of theArgs) {

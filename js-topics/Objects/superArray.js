@@ -40,3 +40,34 @@ console.log(superAob(aob, 'framework'));
 //     { victim: 'Vue.JS', count: 1 },
 //     { victim: 'JavaScript', count: 1 }
 // ]
+
+function flattenObject(obj, parentKey = '') {
+  return Object.keys(obj).reduce((acc, key) => {
+    const fullKey = parentKey ? `${parentKey}.${key}` : key;
+
+    if (typeof obj[key] === 'object' && !Array.isArray(obj[key]) && obj[key] !== null) {
+      // Recursively flatten nested objects
+      Object.assign(acc, flattenObject(obj[key], fullKey));
+    } else {
+      // Assign the flattened key-value pair to the result object
+      acc[fullKey] = obj[key];
+    }
+
+    return acc;
+  }, {});
+}
+
+const nestedObject = {
+  a: {
+    b: {
+      c: 1,
+      d: {
+        e: 2,
+      },
+    },
+  },
+  f: 3,
+};
+
+const flattenedObject = flattenObject(nestedObject);
+console.log(flattenedObject);
