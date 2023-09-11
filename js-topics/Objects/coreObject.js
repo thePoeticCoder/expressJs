@@ -87,7 +87,7 @@ function findStudentsWithSumGreaterThan150(students) {
   for (const student of students) {
     const totalMarks = student.marks.reduce((sum, markObj) => {
       // Extract the mark value from each object and add it to the sum
-      const markValue = Object.values(markObj)[0];
+      const markValue = Object.values(markObj)[0]; //[0] bcz object.values return an array
       return sum + markValue;
     },0);
 

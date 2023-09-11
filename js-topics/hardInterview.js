@@ -123,41 +123,6 @@ console.log(emp1.company);
 
 
 
-// USER _DETAILS{
-//   id
-//   name,
-//   email,
-//   phoneNo,
-//   password,
-//   followersLIstId
-//   postId
-//   role :[user,admin,developer,subAdmin]
-// }
-
-
-
-
-// FOLLOWERS_LIST{
-//   id
-//   userId
-//   FollowerId[]
-
-// }
-
-// POST_LIST{
-//   id:
-//   userId,
-//   time,
-//   content:{
-//     pictureId
-//   }
-// }
-
-// PICTURE_LIST{
-
-//   id
-//   store the photos/videos/text
-// }
 
 
 

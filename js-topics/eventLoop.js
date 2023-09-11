@@ -14,7 +14,6 @@
 // immediate
 
 
-
 // process.nextTick(callback);
 // Whenever a new queue of operations is initialized we can think of it as a new tick. 
 // The process.nextTick() method adds the callback function to the start of the next event queue. 
@@ -31,21 +30,21 @@
 let count = 0
 const cb = () => {
     console.log(`Processing nextTick cb ${++count}`)
-    process.nextTick(cb)
+    //process.nextTick(cb)
 }
 setImmediate(() => console.log('setImmediate is called'))
-setTimeout(() => console.log('setTimeout executed'), 100)
+setTimeout(() => console.log('setTimeout executed'), 0)
 process.nextTick(cb)
 console.log('Start')
 
 //? /////////////////////////////////////////////////////////////////////////////////////////
 
-let count = 0
-const cb = () => {
-    console.log(`Processing setImmediate cb ${++count}`)
-    setImmediate(cb)
-}
-setImmediate(cb)
-setTimeout(() => console.log('setTimeout executed'), 100)
-console.log('Start')
+// let count1 = 0
+// const cb1 = () => {
+//     console.log(`Processing setImmediate cb ${++count1}`)
+//     setImmediate(cb)
+// }
+// setImmediate(cb1)
+// setTimeout(() => console.log('setTimeout executed'), 100)
+// console.log('Start')
 
