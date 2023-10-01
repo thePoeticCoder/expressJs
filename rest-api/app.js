@@ -18,5 +18,5 @@ app.post("/students" , (req , res)=>{
     
 })
 app.listen(port,()=>{
-    console.log(`connection is succes ${port}`);
+    console.log(` is succes ${port}`);
 } );
