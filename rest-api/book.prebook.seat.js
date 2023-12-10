@@ -21,14 +21,6 @@ app.post('/prebook',(req,res)=>{
 		
 	}
  })
-
-
-
-
-
-
-
-
 app.post('/prebook', (req, res) => {
   const { seatNumber } = req.body;
 

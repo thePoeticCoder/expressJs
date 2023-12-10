@@ -1,5 +1,3 @@
-
-
 //let arr =[1,2,3,4,5,6,7,8];
 //arr.push(7);
 // arr.shift();
@@ -28,14 +26,13 @@
 let arr = [12, 35, 1, 10, 34, 1]
 findSecondLargestElem(arr);*/
 
-const arr=[5,1,2,3,6];
+const arr = [5, 1, 2, 3, 6];
 // const doblearr=arr.map((val) => {
 //     return val*2;
 // });
 //console.log(doblearr); //[ 10, 2, 4, 6, 12 ]
 //const oddarr=arr.filter((x)=> x%2==0);
 //console.log(oddarr); //[2,6]
-
 
 //spread operator
 // const myVehicle = {
@@ -65,8 +62,6 @@ const arr=[5,1,2,3,6];
 // // Expected output: 6
 
 // console.log(sum(1, 2, 3, 4));
-
-
 
 /*charAt()	Returns the character at a specified index (position)
 charCodeAt()	Returns the Unicode of the character at a specified index
